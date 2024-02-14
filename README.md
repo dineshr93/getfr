@@ -4,7 +4,7 @@ Fossology report generater
 
 ## Description
 
-This is intended for generating the  using fossology.
+This is intended for generating the reports(readmeoss,spdx2,spdx2tv,dep5,unifiedreport) using folder_id in fossology.
 
 ## Getting Started
 
@@ -14,7 +14,7 @@ This is intended for generating the  using fossology.
 
 ### Installing
 
-- pip install dist/getfr-0.1.0.tar.gz
+- pip install dist/getfr-v.v.v.tar.gz
 
 ### Executing program
 
