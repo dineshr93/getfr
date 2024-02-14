@@ -27,7 +27,7 @@ COMMAND FORMAT:
 getfr [-h] folder_id clearing_status userid since_yyyy_mm_dd report_format
 
 example command:
-getfr [-h] 107 closed all 2024-02-01 readmeoss
+getfr 107 closed all 2024-02-01 readmeoss
 
 
 ```
