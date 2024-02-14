@@ -1,4 +1,4 @@
-# readmeProcess
+# getfr
 
 Fossology report generater
 
