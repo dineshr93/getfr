@@ -113,20 +113,18 @@ def main():
                 print("downloading readmeoss with status "+clearing_status+" for "+upload.uploadname + " done by "+f.get_user_by_id(upload.assignee).email)
                 f.generate_and_get_desired_report_for_uploadid(upload_id=upload.id, report_format=ReportFormat(report_format.lower()))
         print("======================================================================================================")
-        for user in users:
-        # , -unassigned-
+        for user in users: # , -unassigned-
             uploads=f.get_all_uploads_based_on(folder_id,True,'',ClearingStatus[capitalize('open')],user,since_yyyy_mm_dd,1,1000)
             for upload in uploads:
                 print("Pending readmeoss with status "+'open'+" for "+upload.uploadname + " to be done by "+f.get_user_by_id(upload.assignee).email)
         print("======================================================================================================")
-        for user in users:
-        # , -unassigned-
+        for user in users:# , -unassigned-
             uploads=f.get_all_uploads_based_on(folder_id,True,'',ClearingStatus[capitalize('InProgress')],user,since_yyyy_mm_dd,1,1000)
             for upload in uploads:
                 print("Pending readmeoss with status "+'InProgress'+" for "+upload.uploadname + " to be done by "+f.get_user_by_id(upload.assignee).email)
     
     else:
-        uploads=f.get_all_uploads_based_on(folder_id,True,'',ClearingStatus[capitalize(clearing_status)],user,since_yyyy_mm_dd,1,1000)
+        uploads=f.get_all_uploads_based_on(folder_id,True,'',ClearingStatus[capitalize(clearing_status)],userid,since_yyyy_mm_dd,1,1000)
         for upload in uploads:
             print("downloading readmeoss with status "+clearing_status+" for "+upload.uploadname + " done by "+f.get_user_by_id(upload.assignee).email)
             f.generate_and_get_desired_report_for_uploadid(upload_id=upload.id, report_format=ReportFormat(report_format.lower()))

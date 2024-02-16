@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "getfr"
-version = "0.1.1"
+version = "0.1.2"
 description = "get fossology report for a given folder id"
 authors = ["dineshr93gmail.com"]
 license = "MIT"
