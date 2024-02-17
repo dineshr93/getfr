@@ -1,6 +1,6 @@
 # getfr
 
-Fossology report generater
+Fossology combined Notice report generater for all pkgs in a specified folder
 
 ## Description
 
