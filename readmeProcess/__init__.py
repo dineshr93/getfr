@@ -364,7 +364,7 @@ def main():
     if args.sbom:
         sbom=sbomFunc()
         current_directory = os.getcwd()
-        sbom_file_location = os.path.join(current_directory,"SBOM.txt")
+        sbom_file_location = os.path.join(current_directory,"NOTICE-SBOM.txt")
         if os.path.exists(sbom_file_location):
             os.remove(sbom_file_location)
         f = open(sbom_file_location, "a")
