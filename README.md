@@ -24,7 +24,7 @@ This is intended for generating the reports(readmeoss,spdx2,spdx2tv,dep5,unified
 pip install getfr
 
 COMMAND FORMAT:
-getfr [-h] folder_id clearing_status userid since_yyyy_mm_dd report_format
+getfr [-h] [--sbom | --no-sbom] folder_id clearing_status userid since_yyyy_mm_dd report_format
 
 example command:
 getfr 107 closed all 2024-02-01 readmeoss --sbom
