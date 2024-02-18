@@ -343,6 +343,8 @@ def main():
             for upload in uploads:
                 print("downloading readmeoss with status "+clearing_status+" for "+upload.uploadname + " done by "+f.get_user_by_id(upload.assignee).email)
                 f.generate_and_get_desired_report_for_uploadid(upload_id=upload.id, report_format=ReportFormat(report_format.lower()))
+                if args.sbom and report_format.lower() != "readmeoss":
+                    f.generate_and_get_desired_report_for_uploadid(upload_id=upload.id, report_format=ReportFormat("readmeoss"))
         print("======================================================================================================")
         for user in users: # , -unassigned-
             uploads=f.get_all_uploads_based_on(folder_id,True,'',ClearingStatus[capitalize('open')],user,since_yyyy_mm_dd,1,1000)
@@ -359,6 +361,8 @@ def main():
         for upload in uploads:
             print("downloading readmeoss with status "+clearing_status+" for "+upload.uploadname + " done by "+f.get_user_by_id(upload.assignee).email)
             f.generate_and_get_desired_report_for_uploadid(upload_id=upload.id, report_format=ReportFormat(report_format.lower()))
+            if args.sbom and report_format.lower() != "readmeoss":
+                f.generate_and_get_desired_report_for_uploadid(upload_id=upload.id, report_format=ReportFormat("readmeoss"))
 
     sbom = SBOM()
     if args.sbom:
